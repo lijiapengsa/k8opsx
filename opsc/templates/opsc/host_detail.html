@@ -1,1 +1,3 @@
-{{ host_detail.host_name }} - {{ host_detail.host_ip }}
+{% if host_detail %}
+    <li> {{ host_detail.host_name }} - {{ host_detail.host_ip }} </li>
+{% endif %}

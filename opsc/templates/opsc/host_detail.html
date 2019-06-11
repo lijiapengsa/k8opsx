@@ -1,3 +1,6 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'opsc/style.css' %}">
+
 {% if host_detail %}
     <li> {{ host_detail.host_name }} - {{ host_detail.host_ip }} </li>
 {% endif %}

@@ -1,0 +1,8 @@
+*.pyc
+*.sql
+.idea
+settings.py
+db.sqlite3
+opsc/__pycache__/
+*/mitrations/
+docker/dev-data

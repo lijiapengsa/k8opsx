@@ -1,0 +1,17 @@
+version: '3'
+services:
+  opsDb:
+    image: mysql/mysql-server:5.6.30
+    container_name: ops-platform-db
+    restart: always
+    environment:
+      - TZ=Asia/Shanghai
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_USER=xops
+      - MYSQL_PASSWORD=123456
+      - MYSQL_DATABASE=ops_platform
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./ops_platform.sql:/docker-entrypoint-initdb.d/ops_platform.sql
+      - ./dev-data/mysql:/var/lib/mysql

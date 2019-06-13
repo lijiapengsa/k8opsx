@@ -17,7 +17,7 @@ def index(request):
         'latest_question_list': latest_question_list,
     }
 
-    return render(request, 'opsc/index.html', context)
+    return render(request, 'index.html', context)
 
 
 def query_host(request, query_str):

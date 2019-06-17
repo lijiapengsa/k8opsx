@@ -1,7 +1,7 @@
 {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
-        <li><a href="/query_host/{{ question.id }}/">{{ question.host_name }}</a></li>
+        <li><a href="{% url 'opsc:query_host' question.id %}">{{ question.host_name }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
